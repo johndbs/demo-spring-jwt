@@ -1,0 +1,24 @@
+meta {
+  name: hello
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:8080/api/hello
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0b3RvIiwiZXhwIjoxNzExNjIwNDcwLCJpYXQiOjE3MTE1MzQwNzB9.tEOkXyH-wcT7nMtnmP8EhPa1Q2AkjDM7kRO6DE6_Ybc
+}
+
+body:json {
+  {
+    "username" : "toto",
+    "password" : "secret",
+    "email" : "toto@test.com",
+    "roles" : ["ADMIN"]
+  }
+}

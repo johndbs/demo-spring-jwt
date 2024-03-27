@@ -1,0 +1,28 @@
+meta {
+  name: say-hello
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:8080/api/say-hello?name=John
+  body: none
+  auth: bearer
+}
+
+query {
+  name: John
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0b3RvIiwiZXhwIjoxNzExNjIwMTM2LCJpYXQiOjE3MTE1MzM3MzZ9.i9dwDXPrxB_r0ZYBsHFftVhE_Mk4-3Jcy6W_-KG7Mj8
+}
+
+body:json {
+  {
+    "username" : "toto",
+    "password" : "secret",
+    "email" : "toto@test.com",
+    "roles" : ["ADMIN"]
+  }
+}
